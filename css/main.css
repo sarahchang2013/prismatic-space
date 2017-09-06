@@ -1,0 +1,66 @@
+@media (max-width: 575px){
+	#logo{
+		width: 4em;
+		height: 4em;
+	}
+}
+
+@media (max-width: 383px){
+	#logo{
+		width: 3em;
+		height: 3em;
+	}
+}
+
+@media (min-width: 576px){
+	#logo {
+		max-width: 5.5em;
+		max-height: 5.5em;
+		float: left;
+ 	}
+ }
+
+
+#name {
+	margin: 0;
+	float: right;
+	/*font-size: 3em;*/
+	font-weight: 100;
+	color: #2d3c49;
+	text-transform: uppercase;
+	font-family: 'Raleway', sans-serif;
+
+}
+
+#occupation {
+	margin: 0;
+	float: right;
+	clear: right;
+	/*font-size: 1.2em;*/
+	font-weight: lighter;
+	color: #2d3c49;
+	text-transform: uppercase;
+	font-family: sans-serif;
+}
+
+#blog {
+	border-style: solid;
+	border-color: #7d97ad transparent transparent transparent;
+	border-top-width: .3em;
+	background-color: #eff1f4;
+	font-family: sans-serif;
+}
+
+#featured-title{
+	float: left;
+	color: #a0a0a5;
+	font-family: sans-serif;
+	font-size: 2em;
+	font-weight: lighter;
+}
+
+#contact {
+	margin: 0 auto;
+	background-color: #eff1f4;
+	font-family: sans-serif;
+}
