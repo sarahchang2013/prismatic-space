@@ -25,25 +25,25 @@
 
 @media (max-width: 575px){
 	#logo{
-		width: 4em;
-		height: 4em;
+		width: 5em;
+		height: 5em;
 	}
 
 	.video {
 		width: 100%;
-		height: 150px;
+		height: 190px;
 	}
 }
 
 @media (max-width: 283px){
 	#logo{
-		width: 3em;
-		height: 3em;
+		width: 3.5em;
+		height: 3.5em;
 	}
 
 	.video {
 		width: 100%;
-		height: 80px;
+		height: 100px;
 	}
 }
 
@@ -55,7 +55,7 @@
 	font-weight: 100;
 	color: #2d3c49;
 	text-transform: uppercase;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Caveat', cursive;
 
 }
 
@@ -67,7 +67,7 @@
 	font-weight: lighter;
 	color: #2d3c49;
 	text-transform: uppercase;
-	font-family: sans-serif;
+	font-family: 'Caveat', cursive;
 }
 
 #blog {
