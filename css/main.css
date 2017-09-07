@@ -4,7 +4,7 @@
 		max-height: 5.5em;
 		float: left;
  	}
- 	
+
 	.video {
  		width: 50%;
  		height: 300px;
@@ -35,16 +35,18 @@
 	}
 }
 
-@media (max-width: 383px){
+@media (max-width: 283px){
 	#logo{
 		width: 3em;
 		height: 3em;
 	}
 
 	.video {
-		display: none;
+		width: 50%;
+		height: 80px;
 	}
 }
+
 
 #name {
 	margin: 0;
