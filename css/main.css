@@ -5,48 +5,48 @@
 		float: left;
  	}
 
-	.video {
+	.video, .description {
  		width: 50%;
  		height: 300px;
  	}
 }
-@media (max-width: 1000px){
+
+@media (max-width: 1000px) {
 	#logo {
 		max-width: 5.5em;
 		max-height: 5.5em;
 		float: left;
  	}
 
- 	.video {
+ 	.video, .description {
  		width: 50%;
  		height: 200px;
  	}
- }
+}
 
-@media (max-width: 575px){
-	#logo{
+@media (max-width: 575px) {
+	#logo {
 		width: 5em;
 		height: 5em;
 	}
 
-	.video {
+	.video, .description {
 		width: 100%;
 		height: 190px;
-	}
+	} 
 }
 
-@media (max-width: 283px){
-	#logo{
+@media (max-width: 283px) {
+	#logo {
 		width: 3.5em;
 		height: 3.5em;
 	}
 
-	.video {
+	.video, .description {
 		width: 100%;
 		height: 100px;
 	}
 }
-
 
 #name {
 	margin: 0;
@@ -78,7 +78,19 @@
 	font-family: sans-serif;
 }
 
-#featured-title{
+.vlog {
+	margin: 1.5em;
+}
+
+.description {
+	padding: 1.5em;
+	overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 9;
+    -webkit-box-orient: vertical;  
+}
+
+#featured-title {
 	float: left;
 	color: #a0a0a5;
 	font-family: sans-serif;
