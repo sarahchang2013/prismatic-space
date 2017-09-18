@@ -2,7 +2,6 @@
 	#logo {
 		max-width: 5.5em;
 		max-height: 5.5em;
-		float: left;
  	}
 
 	.video, .description {
@@ -15,7 +14,6 @@
 	#logo {
 		max-width: 5.5em;
 		max-height: 5.5em;
-		float: left;
  	}
 
  	.video, .description {
@@ -48,10 +46,13 @@
 	}
 }
 
+#logo {
+	float: left;
+}
+
 #name {
-	margin: 0;
-	float: right;
-	/*font-size: 3em;*/
+	margin: 5px;
+	text-align: right;
 	font-weight: 100;
 	color: #2d3c49;
 	text-transform: uppercase;
@@ -61,9 +62,7 @@
 
 #slogan {
 	margin: 0;
-	float: right;
-	clear: right;
-	/*font-size: 1.2em;*/
+	text-align: right;
 	font-weight: lighter;
 	color: #2d3c49;
 	text-transform: uppercase;
