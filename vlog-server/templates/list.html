@@ -1,0 +1,31 @@
+<html>	
+	<head>
+		<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+	</head>
+	<body>
+		<div class = 'pane'>
+			<h1>{{ category.name }}</h1>
+
+			<h2>Articles</h2>
+
+			{% for i in items %}
+				{% if i.course == 'Appetizer' %}
+
+				<p>{{i.name}}</p>
+	
+
+				<p>{{i.description}}</p>
+	
+
+				<p>{{i.price}}</p>
+	
+				</br>
+				</br>
+				{% endif %}
+
+			{% endfor %}
+				
+			</br></br>	
+		</div>
+	</body>
+</html>
