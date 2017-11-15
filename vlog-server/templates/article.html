@@ -1,0 +1,22 @@
+<html>	
+	<head>
+		<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+	</head>
+	<body>
+		<div class = 'pane'>
+			<h1>{{article.title}}</h1>
+
+			<h2>{{ category.name }}</h2>
+
+				<iframe width="560" height="315" src="{{article.embeded_code}}?&autoplay=1" frameborder="0" allowfullscreen></iframe>
+	
+
+				<p>{{article.text}}</p>
+	
+				</br>
+				</br>
+				
+			</br></br>	
+		</div>
+	</body>
+</html>

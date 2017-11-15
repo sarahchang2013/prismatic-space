@@ -6,9 +6,9 @@
 		<div class = 'pane'>
 			<h1>Cspectra</h1>
 
-			{% for category in categories %}
+			{% for article in articles %}
 
-			<a href = "{{url_for('showList', category_id = category.id)}}"> <p>{{category.name}}</p></a>
+			<a href = "{{url_for('showArticle', category_id = article.category_id, article_id = article.id, slug = article.slug)}}"> <p>{{article.title}}</p></a>
 
 			{% endfor %}
 		</div>
