@@ -2,19 +2,20 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from database_setup import Category, Base, Article
 
-
-#edit this section and the txt file to update the article
+#Edit this section to decide which fields to update
+editTitle = False
+editSlug = False
+editEmbeded = False
+editText = False
+editCategory = True
+#Edit this section and the txt file to update the article
 embeded_code = 'https://www.youtube.com/embed/IJbnLlUYnuM'
 title = "Why The Idea of a Space Nation is Challenging"
 slug = "why-the-idea-of-a-space-nation-is-challenging"
 article_id = 8
+category_id = 11
 
 
-
-#store new text in a file with the new slug and read it
-article_file = open (slug+".txt", "r")
-#string was utf-8 encoded, so decode it to store in database
-text=article_file.read().decode('utf-8')
 
 engine = create_engine('sqlite:///vlogsite.db')
 
@@ -36,11 +37,21 @@ session = DBSession()
 # Update the article
 
 editedArticle = session.query(Article).filter_by(id=article_id).one()
-editedArticle.title = title
-editedArticle.slug = slug
-editedArticle.embeded_code = embeded_code
-editedArticle.text = text
+if editTitle:
+    editedArticle.title = title
+if editSlug:
+    editedArticle.slug = slug
+if editEmbeded:
+    editedArticle.embeded_code = embeded_code
+if editText:
+    #Store new text in a file with the new slug and read it
+    article_file = open (slug+".txt", "r")
+    #String was utf-8 encoded, so decode it to store in database
+    text=article_file.read().decode('utf-8')
+    editedArticle.text = text
+if editCategory:
+    editedArticle.category_id = category_id
 
-#must commit the transaction, otherwise the previous operations are not applied.
+#Must commit the transaction, otherwise the previous operations are not applied.
 session.commit()
 

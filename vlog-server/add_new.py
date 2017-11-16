@@ -7,13 +7,13 @@ from database_setup import Category, Base, Article
 
 
 #edit this section and the txt file
-category_of_article = "Science and Technology"
-embeded_code = 'https://www.youtube.com/embed/2Y7xjAcmQQc'
-title = "Why North Korea's Nuclear Problems are Hard to Resolve"
-slug = "why-north-korea-nuclear-problems-are-hard-to-resolve"
+category_of_article = "Regions"
+embeded_code = 'https://www.youtube.com/embed/YYnyt3DUvAU'
+title = "Why China's Great Wall is No Longer Being Built"
+slug = "why-china-great-wall-is-no-longer-being-built"
 
-
-
+#text field was set to be nullable, so if no text exists, 
+#just copy and paste the title in the text file.
 
 #store text in a file and read it
 article_file = open ("new_article.txt", "r")
@@ -36,17 +36,19 @@ DBSession = sessionmaker(bind=engine)
 # session.rollback()
 session = DBSession()
 
-
-category1 = Category(name=category_of_article)
 # Check if category exists, if not, create one.
-check = session.query(exists().where(Category.name == category_of_article)).scalar()
-
-if not check :
+check_c = session.query(exists().where(Category.name == category_of_article)).scalar()
+if not check_c :
+    category1 = Category(name=category_of_article)
     session.add(category1)
     session.commit()
 
+#check if article exists, if not, create one.
+check_a = session.query(exists().where(Article.title == title)).scalar()
 #Ad new article
-article1 = Article(title=title, slug=slug,embeded_code=embeded_code, text=text, category=category1)
-session.add(article1)
-session.commit()
+if not check_a :
+    category1 = session.query(Category).filter_by(name=category_of_article).first()
+    article1 = Article(title=title, slug=slug,embeded_code=embeded_code, text=text, category=category1, category_id=category1.id)
+    session.add(article1)
+    session.commit()
 

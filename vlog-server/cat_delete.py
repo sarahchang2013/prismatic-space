@@ -3,8 +3,8 @@ from sqlalchemy.orm import sessionmaker
 
 from database_setup import Category, Base, Article
 
-#edit this line to delete an article with "id"
-article_id = 11
+#edit this line to delete a category with "id"
+category_id = 9
 
 
 
@@ -25,7 +25,7 @@ DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
 
-articleToDelete = session.query(Article).filter_by(id=article_id).one()
-session.delete(articleToDelete)
+categoryToDelete = session.query(Category).filter_by(id=category_id).one()
+session.delete(categoryToDelete)
 session.commit()
 
