@@ -4,7 +4,7 @@ from sqlalchemy.orm import sessionmaker
 from database_setup import Category, Base, Article
 
 #edit this line to delete an article with "id"
-article_id = 6
+article_id = 7
 
 
 

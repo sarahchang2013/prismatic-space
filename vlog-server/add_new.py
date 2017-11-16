@@ -1,7 +1,6 @@
-
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-
+from sqlalchemy import exists
 from database_setup import Category, Base, Article
 
 
@@ -9,9 +8,9 @@ from database_setup import Category, Base, Article
 
 #edit this section and the txt file
 category_of_article = "Science and Technology"
-embeded_code = 'https://www.youtube.com/embed/IJbnLlUYnuM'
-title = "Why the Idea of a Space Nation is Challenging"
-slug = "why-the-idea-of-a-space-nation-is-challenging"
+embeded_code = 'https://www.youtube.com/embed/2Y7xjAcmQQc'
+title = "Why North Korea's Nuclear Problems are Hard to Resolve"
+slug = "why-north-korea-nuclear-problems-are-hard-to-resolve"
 
 
 
@@ -38,14 +37,16 @@ DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
 
-# Articles for Science and Technology
 category1 = Category(name=category_of_article)
+# Check if category exists, if not, create one.
+check = session.query(exists().where(Category.name == category_of_article)).scalar()
 
-session.add(category1)
-session.commit()
+if not check :
+    session.add(category1)
+    session.commit()
 
+#Ad new article
 article1 = Article(title=title, slug=slug,embeded_code=embeded_code, text=text, category=category1)
-
 session.add(article1)
 session.commit()
 

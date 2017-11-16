@@ -5,8 +5,8 @@ from database_setup import Category, Base, Article
 
 #edit this section and the txt file to update the article
 embeded_code = 'https://www.youtube.com/embed/IJbnLlUYnuM'
-title = "The Idea of a Space Nation is Challenging The World"
-slug = "the-idea-of-a-space-nation-is-challenging-the-world"
+title = "Why The Idea of a Space Nation is Challenging"
+slug = "why-the-idea-of-a-space-nation-is-challenging"
 article_id = 8
 
 
