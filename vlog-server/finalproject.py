@@ -17,7 +17,7 @@ session = DBSession()
 @app.route('/')
 @app.route('/homepage/')
 def homePage():
-    articles = session.query(Article).limit(20).all()
+    articles = session.query(Article).order_by(Article.id.desc()).limit(20).all()
     #This page will show all categories
     return render_template('homepage.html', articles=articles)
 
