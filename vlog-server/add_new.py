@@ -7,10 +7,10 @@ from database_setup import Category, Base, Article
 
 
 #edit this section and the txt file
-category_of_article = "Regions"
-embeded_code = 'https://www.youtube.com/embed/YYnyt3DUvAU'
-title = "Why China's Great Wall is No Longer Being Built"
-slug = "why-china-great-wall-is-no-longer-being-built"
+category_of_article = "Animal World"
+embeded_code = 'https://www.youtube.com/embed/tBzgT5godVA'
+title = "Animal Kingdom: Hermit Crabs Wearing EVERYTHING"
+slug = "animal-kingdom-hermit-crabs-wearing-everthing"
 
 #text field was set to be nullable, so if no text exists, 
 #just copy and paste the title in the text file.
