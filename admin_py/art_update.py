@@ -9,11 +9,12 @@ editEmbeded = False
 editText = False
 editCategory = True
 #Edit this section and the txt file to update the article
-embeded_code = 'https://www.youtube.com/embed/IJbnLlUYnuM'
-title = "Why The Idea of a Space Nation is Challenging"
-slug = "why-the-idea-of-a-space-nation-is-challenging"
-article_id = 8
-category_id = 11
+#Enter url inside the embeded code
+embeded_code = ''
+title = ""
+slug = ""
+article_id = 9
+category_id = 12
 
 
 

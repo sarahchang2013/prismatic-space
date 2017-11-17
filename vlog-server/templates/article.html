@@ -10,7 +10,7 @@
 	<body class="container">
 		<div class = 'row pane'>
 			<a href="{{url_for('homePage')}}"><h1>Cspectra</h1></a><br>
-			<h2>{{article.title}}</h2>
+			<h2>{{category.name}}|{{article.title}}</h2>
 
 					<iframe class="embeded-video" width="100%" height="415" src="{{article.embeded_code}}?&autoplay=1" frameborder="0" allowfullscreen></iframe>
 
