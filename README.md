@@ -1,1 +1,1 @@
-# prismatic-space
+# prismatic-space - An Amazing Idea
